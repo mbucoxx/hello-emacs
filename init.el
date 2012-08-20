@@ -24,6 +24,9 @@
 (column-number-mode t) ;; Show column-number in the mode line
 (global-linum-mode t) ;; show line number in the left side
 
+;; set frame title to "buffer name" "read/write access" "file name"
+(setq frame-title-format "%b %* %f")
+
 ;; do not indent with tabs, indent with space
 (setq-default indent-tabs-mode nil)
 
