@@ -19,7 +19,7 @@
         erlang-electric-semicolon
       ; Insert a '>'-sign and possible a new indented line.
         erlang-electric-gt
-        )) ;; auto indent
+        ))
 
 
 ;; -------------------------------------------------------------------
