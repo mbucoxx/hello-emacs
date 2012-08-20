@@ -4,29 +4,31 @@
 ;;
 
 
-;; (setq load-path (cons  "/vobs/otp/otp_delivery/suse_x86/lib/tools-0/emacs" load-path))
-;; (setq erlang-root-dir "/vobs/otp/otp_delivery/suse_x86")
-;; (setq exec-path (cons "/vobs/otp/otp_delivery/suse_x86/bin" exec-path))
-;; (require 'erlang-start)
+;; Setup erlang path
+(setq load-path (cons  "C:/Program Files/erl5.9.1/lib/tools-2.6.7/emacs"
+      load-path))
+      (setq erlang-root-dir "C:/Program Files/erl5.9.1")
+      (setq exec-path (cons "C:/Program Files/erl5.9.1/bin" exec-path))
+(require 'erlang-start)
 
-;; (setq erlang-electric-commands
-;;   '(erlang-electric-comma
-;;     erlang-electric-semicolon
-;;     erlang-electric-gt
-;;     erlang-electric-newline))           ; auto indent
 
-;; ;; This is needed for Distel setup
-;; ;;(let ((distel-dir "/home/elixren/bin/distel/elisp"))
-;; ;;  (unless (member distel-dir load-path)
-;; ;; Add distel-dir to the end of load-path
-;; ;;    (setq load-path (append load-path (list distel-dir)))))
+(setq erlang-electric-commands
+      ; Insert a comma character and possibly a new indented line. 
+      '(erlang-electric-comma
+      ; Insert a semicolon character and possibly a prototype for the next line.
+        erlang-electric-semicolon
+      ; Insert a '>'-sign and possible a new indented line.
+        erlang-electric-gt
+        )) ;; auto indent
 
-;; (require 'distel)
-;; (distel-setup)
 
+;; -------------------------------------------------------------------
+;;                      Erlang KEY BINDINGS
+;; -------------------------------------------------------------------
 (add-hook 'erlang-mode-hook
           '(lambda ()
-             (define-key erlang-mode-map (kbd "C-.") 'erl-find-source-under-point)
+             (define-key erlang-mode-map (kbd "C-.")
+               'erl-find-source-under-point)
              ))
 (add-hook 'erlang-mode-hook
           '(lambda ()
