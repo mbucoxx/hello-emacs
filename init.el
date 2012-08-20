@@ -10,9 +10,22 @@
 
 (put 'narrow-to-region 'disabled nil)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                      KEY BINDINGS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-set-key "\M-g" 'goto-line)  ; Bind goto-line with Alt+g
 (global-set-key "\C-x\ c" 'revert-buffer)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                      Display
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(column-number-mode t) ;; Show column-number in the mode line
+(global-linum-mode t) ;; show line number in the left side
+
+;; do not indent with tabs, indent with space
+(setq-default indent-tabs-mode nil)
 
 
 (custom-set-variables
@@ -20,12 +33,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(column-number-mode t) ;; Show column-number in the mode line
- '(custom-enabled-themes (quote (deeper-blue))) ;; Enable color theme deeper-blue
+ '(custom-enabled-themes (quote (deeper-blue)))
  '(desktop-buffers-not-to-save "Python")
  '(desktop-save-mode t)
  '(ido-mode (quote both) nil (ido))
- '(indent-tabs-mode nil)
  '(python-check-command "c:/tools/Python27/Scripts/pychecker.bat --stdlib")
  '(python-python-command "c:/tools/Python27/python.exe"))
 (custom-set-faces
