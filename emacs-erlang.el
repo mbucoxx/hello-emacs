@@ -1,3 +1,8 @@
+;;; emacs-erlang.el
+;;
+;; Description: Customize options for erlang
+;;
+
 ;;****************************************************************
 ;;                        Erlang mode
 ;;****************************************************************
@@ -29,3 +34,5 @@
           '(lambda ()
              (define-key erlang-mode-map (kbd "C-,") 'erl-find-source-unwind)
              ))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; emacs-erlang.el ends here

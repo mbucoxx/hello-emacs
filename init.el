@@ -1,3 +1,9 @@
+;;; init.el
+;;
+;; Description: initialize file for emacs
+;;
+
+
 (setq load-path (cons "~/.emacs.d" load-path))
 
 (savehist-mode 1)
@@ -14,7 +20,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(column-number-mode t) ;; Show column-number in the mode line
+ '(custom-enabled-themes (quote (deeper-blue))) ;; Enable color theme deeper-blue
  '(desktop-buffers-not-to-save "Python")
  '(desktop-save-mode t)
  '(ido-mode (quote both) nil (ido))
@@ -58,6 +65,5 @@
       (delete-file file))))
 
 
-;;****************************************************************
-;;                        End of file
-;;****************************************************************
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init.el ends here
