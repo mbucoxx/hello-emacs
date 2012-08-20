@@ -3,9 +3,7 @@
 ;; Description: Customize options for erlang
 ;;
 
-;;****************************************************************
-;;                        Erlang mode
-;;****************************************************************
+
 ;; (setq load-path (cons  "/vobs/otp/otp_delivery/suse_x86/lib/tools-0/emacs" load-path))
 ;; (setq erlang-root-dir "/vobs/otp/otp_delivery/suse_x86")
 ;; (setq exec-path (cons "/vobs/otp/otp_delivery/suse_x86/bin" exec-path))
@@ -34,5 +32,6 @@
           '(lambda ()
              (define-key erlang-mode-map (kbd "C-,") 'erl-find-source-unwind)
              ))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; -------------------------------------------------------------------
 ;;; emacs-erlang.el ends here
